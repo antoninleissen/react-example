@@ -1,0 +1,91 @@
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+@import '../core/variables';
+
+$font-size-xs:                        $font-size-base * .750 !default;
+
+// COLORS
+$primary:                             #742434;
+$secondary:                           #988676;
+$green:                               #2abb9b;
+
+// core overrides
+
+$border-color:                        $gray-200;
+
+// Z-index
+
+$zindex-header:                       1100;
+
+// Navbar
+
+$navbar-height:                       50px;
+$navbar-bg:                           $primary;
+$navbar-border:                       0;
+$navbar-brand-width:                  220px;
+$navbar-brand-bg:                     $primary;
+$navbar-brand-logo-size:              200px auto;
+$navbar-brand-border:                 0;
+
+$navbar-color:                        #fff;
+$navbar-hover-color:                  darken($navbar-color, 10%);
+$navbar-active-color:                 darken($navbar-color, 20%);
+$navbar-disabled-color:               lighter($navbar-color, 20%);
+
+// Sidebar
+$sidebar-bg:                          $primary;
+$sidebar-width:                       0px;
+$mobile-sidebar-width:                0px;
+
+// Sidebar Navigation
+
+$sidebar-nav-title-padding-y:         .95rem;
+$sidebar-nav-title-color:             $text-muted;
+
+$sidebar-nav-link-hover-bg:           darken($sidebar-bg, 10%);
+
+$sidebar-nav-link-active-bg:          darken($sidebar-bg, 10%);
+$sidebar-nav-link-active-icon-color:  theme-color("primary");
+
+$sidebar-nav-dropdown-bg:             darken($sidebar-bg, 5%);
+
+// Breadcrumb
+
+$breadcrumb-borders:                  0;
+
+// Footer
+
+$footer-bg:                           $gray-800;
+$footer-color:                        #fff;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$line-height-xs:              1.5 !default;
+$border-radius-xs:            .1rem !default;
+
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-padding-y-xs:      .125rem !default;
+$input-btn-padding-x-xs:      .25rem !default;
+$input-btn-font-size-xs:      $font-size-xs !default;
+$input-btn-line-height-xs:    $line-height-xs !default;
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-y-xs:            $input-btn-padding-y-xs !default;
+$btn-padding-x-xs:            $input-btn-padding-x-xs !default;
+$btn-font-size-xs:            $input-btn-font-size-xs !default;
+$btn-line-height-xs:          $input-btn-line-height-xs !default;
+
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius-xs:        $border-radius-xs !default;

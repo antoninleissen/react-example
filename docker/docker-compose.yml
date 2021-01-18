@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  http-sezaam-react-example:
+    container_name: http-sezaam-react-example
+    build: http/
+    working_dir: ${WORKING_DIR}
+    volumes:
+      - ../public:${WORKING_DIR}
+      - ./http/backoffice.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - ${PORT_LOCAL_HTTP}:80
