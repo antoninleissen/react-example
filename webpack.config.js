@@ -125,7 +125,7 @@ module.exports = () => {
             new CopyWebpackPlugin(
                 [
                     {
-                        from: './resources/',
+                        from: './src/',
                         to: './'
                     }
                 ]
