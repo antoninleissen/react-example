@@ -1,0 +1,39 @@
+.left{
+    float: left;
+    margin: 20px;
+    width: 300px;
+}
+
+.right{
+    float: right;
+    margin: 20px;
+    width: 300px;
+}
+
+.list{
+    list-style: none;
+    display: inline;
+}
+
+.listItem{
+    padding: 8px;
+    margin-left: 3px;
+    margin-bottom: 1px;
+    background-color: rgb(214, 213, 213);
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 5px;
+    font-weight: bold;
+    color: rgb(41, 41, 41);
+    cursor: default;
+}
+.listItem:hover{
+    background-color: rgb(226, 226, 226);
+}
+
+.del{
+    float: right;
+    color: rgb(168, 167, 167);
+}
+.del:hover{
+    color: rgb(175, 59, 59);
+}
