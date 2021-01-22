@@ -18,3 +18,34 @@
 
 // Import core styles
 @import "core/core";
+
+
+
+ul {
+    list-style: none;
+    padding-left: 10px;
+    
+}
+
+ 
+li {
+    margin-top: 15px;
+}
+
+div.column {
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding-top: 30px;
+    padding-right: 80px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    margin: 20px;
+    width: 40%;
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: top;  
+}
+
+
+
+

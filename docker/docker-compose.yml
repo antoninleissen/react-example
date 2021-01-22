@@ -9,4 +9,4 @@ services:
       - ../public:${WORKING_DIR}
       - ./http/backoffice.conf:/etc/nginx/conf.d/default.conf
     ports:
-      - ${PORT_LOCAL_HTTP}:80
+      - ${PORT_LOCAL_HTTP}:30
