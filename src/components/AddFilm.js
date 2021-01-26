@@ -38,33 +38,33 @@ class AddFilm extends React.Component {
         });
     }
 
-    addFav = (fav) => {
-        console.log(fav)
-        this.setState({
-            favoris: [...this.state.favoris, fav]
-        });
-    }
+    // addFav = (fav) => {
+    //     this.setState({
+    //         favoris: [...this.state.favoris, fav]
+    //     });
+    // a mettre dans le liens --> onClick={this.addFav(titre)}
+    // }
 
     renderFilm = () => {
         return this.state.titres.map((titre) => {
 
             return (
                 <div className="list-group-item col" key={titre}>
-                    <a onClick={this.addFav(titre)}>{titre} </a> | <i onClick={this.deleteFilm.bind(this, titre)} className="fas fa-times"></i>
+                    <a>{titre} </a> | <i onClick={this.deleteFilm.bind(this, titre)} className="fas fa-times"></i>
                 </div>
             )
         });
     }
 
-    renderFav = () => {
-        return this.state.favoris.map((fav) => {
-            return (
-                <div className="list-group-item col" key={fav}>
-                    {fav} | <i onClick={this.deleteFilm.bind(this, fav)} className="fas fa-times"></i>
-                </div>
-            )
-        });
-    }
+    // renderFav = () => {
+    //     return this.state.favoris.map((fav) => {
+    //         return (
+    //             <div className="list-group-item col" key={fav}>
+    //                 {fav} | <i onClick={this.deleteFilm.bind(this, fav)} className="fas fa-times"></i>
+    //             </div>
+    //         )
+    //     });
+    // }
 
     render() {
         return (
@@ -80,7 +80,7 @@ class AddFilm extends React.Component {
                 <div className="row">
                     <div className="list-group col">
                         <h3>Tous les films :</h3>
-                        {/* {this.renderFilm()} */}
+                        {this.renderFilm()}
                     </div>
 
                     <div className="list-group col">
