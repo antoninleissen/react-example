@@ -1,11 +1,15 @@
-import React                  from 'react';
+import React from 'react';
+import AddFilm from './components/AddFilm';
 
-function App() {
-    return (
-        <span>
-            Here magic begins
-        </span>
-    );
+
+class App extends React.Component {
+
+    render() {
+        return (
+            <AddFilm/>
+        );
+    }
+
 }
 
 export default App;
