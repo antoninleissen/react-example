@@ -30,7 +30,6 @@ class AddFilm extends React.Component {
         }
     }
 
-
     handleSubmitFav = (titre) => {  //même fonction mais pour les favoris au click sur le titre
         const array = this.state.titres;
         const index = array.indexOf(titre);
