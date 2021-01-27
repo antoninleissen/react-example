@@ -4,7 +4,7 @@ class AddFilm extends React.Component {
 
     state = {
         userInput: '',  //récupération de l'input ajout du film
-        titres: [],     //array vide pour les titres
+        titres: ['Film 1', 'Film 2', 'Film 3'],     //array vide pour les titres
         favoris: []     //array vide pour les titres favoris
     }
 
@@ -17,15 +17,16 @@ class AddFilm extends React.Component {
     handleSubmit = (e) => {     //récupération au click "ajouter"
         e.preventDefault()
         const array = this.state.titres;
+        const array2 = this.state.favoris;
         const usrInput = this.state.userInput;
-        if (array.includes(usrInput)) {     // test film existant
+        if (array.includes(usrInput) || array2.includes(usrInput)) {     // check si film existant dans titres ou favoris
             return (
                 alert("Ce film est déjà dans la liste")
             );
         } else {    //si inexistant alors on le rajoute à la liste de titres
             this.setState({
                 userInput: '',
-                titres: [...this.state.titres, this.state.userInput]    
+                titres: [...this.state.titres, this.state.userInput]
             });
         }
     }
@@ -74,16 +75,23 @@ class AddFilm extends React.Component {
     render() {
         return (
             <div>
+                <br/>
+                <br/>
+                <div className="row offset-2">
+                    <h2>Ajouter un film inexistant dans la liste :</h2>
+                </div>
+                <br/>
                 <form onSubmit={this.handleSubmit}>
                     <div className="row ">
                         <div className="form-group">
+
                             <input required type="text" className="form-control offset-2 col-8" placeholder="Ajouter un film" id="addFilm" onChange={this.handleChange} value={this.state.userInput} />
                         </div>
                         <button className="btn btn-primary offset-5 col-2">Ajouter</button>
                     </div>
                 </form>
-                <br/>
-                <br/>
+                <br />
+                <br />
                 <div className="row">
                     <div className="list-group col">
                         <div>
