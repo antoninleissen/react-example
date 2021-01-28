@@ -4,7 +4,7 @@ class AddFilm extends React.Component {
 
     state = {
         userInput: '',  //récupération de l'input ajout du film
-        titres: ['Film 1', 'Film 2', 'Film 3'],     //array vide pour les titres
+        titres: ['Film 1', 'Film 2', 'Film 3'],     //array pour les titres
         favoris: []     //array vide pour les titres favoris
     }
 
@@ -19,7 +19,7 @@ class AddFilm extends React.Component {
         const array = this.state.titres;
         const array2 = this.state.favoris;
         const usrInput = this.state.userInput;
-        if (array.includes(usrInput) || array2.includes(usrInput)) {     // check si film existant dans titres ou favoris
+        if (array.includes(usrInput) || array2.includes(usrInput)) {     //check si film existant dans titres ou favoris
             return (
                 alert("Ce film est déjà dans la liste")
             );
@@ -31,7 +31,7 @@ class AddFilm extends React.Component {
         }
     }
 
-    handleSubmitFav = (titre) => {  //même fonction mais pour les favoris au click sur le titre
+    handleSubmitFav = (titre) => {  // le titre en favoris et retire les films de la liste au click sur le titre
         const array = this.state.titres;
         const index = array.indexOf(titre);
         array.splice(index, 1);
@@ -51,7 +51,7 @@ class AddFilm extends React.Component {
         }, () => console.log(this.state));
     }
 
-    renderFilm = () => {       //render des films
+    renderFilm = () => {       //render des films + clique ajout favoris
         return this.state.titres.map((titre) => {
 
             return (
