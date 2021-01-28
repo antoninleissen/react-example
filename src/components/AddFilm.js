@@ -55,7 +55,7 @@ class AddFilm extends React.Component {
         return this.state.titres.map((titre) => {
 
             return (
-                <div className="list-group-item col" key={titre}>
+                <div className="list-group-item" key={titre}>
                     <a onClick={this.handleSubmitFav.bind(this, titre)}>{titre}</a>
                 </div>
             )
@@ -65,7 +65,7 @@ class AddFilm extends React.Component {
     renderFav = () => {     //render des favs + option de supression
         return this.state.favoris.map((fav) => {
             return (
-                <div className="list-group-item col" key={fav}>
+                <div className="list-group-item" key={fav}>
                     {fav} | <i onClick={this.deleteFilmFav.bind(this, fav)} className="fas fa-times"></i>
                 </div>
             )
@@ -75,12 +75,12 @@ class AddFilm extends React.Component {
     render() {
         return (
             <div>
-                <br/>
-                <br/>
+                <br />
+                <br />
                 <div className="row offset-2">
                     <h2>Ajouter un film inexistant dans la liste :</h2>
                 </div>
-                <br/>
+                <br />
                 <form onSubmit={this.handleSubmit}>
                     <div className="row ">
                         <div className="form-group">
@@ -93,13 +93,13 @@ class AddFilm extends React.Component {
                 <br />
                 <br />
                 <div className="row">
-                    <div className="list-group col">
+                    <div className="col">
                         <div>
                             <h3>Tous les films :</h3>
                         </div>
                         {this.renderFilm()}
                     </div>
-                    <div className="list-group col">
+                    <div className="col">
                         <h3>Vos favoris :</h3>
                         {this.renderFav()}
                     </div>
