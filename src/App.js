@@ -1,11 +1,12 @@
-import React                  from 'react';
+import React from 'react';
+import Films from './components/films';
 
-function App() {
-    return (
-        <span>
-            Here magic begins
-        </span>
-    );
-}
+const App = () => {
+  return (
+    <div>
+      <Films />
+    </div>
+  );
+};
 
 export default App;

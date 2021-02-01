@@ -1,0 +1,59 @@
+.colone{
+    min-width: 600px;
+    font-family: $color-4;
+    height: 100%;
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 49% 2% 49%;
+    
+    
+
+    h1{
+        letter-spacing: .3rem;
+        color: $white;
+        padding: 1rem;
+    }
+
+    .film{
+        margin: 20px;
+        background-color: $color-3;
+        border-radius: $borderRadius;
+        li{
+            cursor: pointer;
+        }
+    }
+
+    .favoris{
+        margin: 20px;
+        background-color: $color-3;
+        border-radius: $borderRadius;
+        cursor: default;
+    }
+
+    li{
+        font-family: $font-2;
+        margin-bottom: 0.5rem;
+        
+        i{
+            cursor: pointer;
+            float: right;
+            padding-right: 1em;
+        }
+
+    }
+    li:hover{
+        font-weight: bold;
+        i{
+            font-weight: bold;
+        }
+    }
+    
+}
+
+.title{
+    text-align: center;
+    font-family: $font-1;
+    font-size: larger;
+}
